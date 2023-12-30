@@ -1,0 +1,24 @@
+@import '../../scss/abstracts/variables';
+.button {
+  cursor: pointer;
+  display: inline-block;
+  height: 2rem;
+  width: 6rem;
+  text-align: center;
+  font-size: 1rem;
+  color: var(--text-light);
+  background-color: var(--text--disabled);
+  border: none;
+  border-radius: $br--5;
+  transition: 0.3s ease-in-out;
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--text--hover);
+    }
+  }
+
+  &:disabled {
+    background-color: var(--button-disabled);
+  }
+}
