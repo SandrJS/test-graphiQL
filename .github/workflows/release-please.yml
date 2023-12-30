@@ -22,3 +22,4 @@ jobs:
           release-type: node
           package-name: '@SandrJS/test-graphiQL'
           default-branch: develop
+          default_branch_protected: true
