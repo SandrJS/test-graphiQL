@@ -1,25 +1,23 @@
 # .github/workflows/release-please.yml
+# name: Release please with Bot
 
-name: Release please with Bot
+# on:
+#   push:
+#     branches:
+#       - develop
 
-on:
-  push:
-    branches:
-      - develop
+# permissions:
+#   contents: write
+#   pull-requests: write
+# jobs:
+#   release:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Use release-please action
+#         uses: google-github-actions/release-please-action@v3
+#         with:
+#           token: ${{ secrets.GITHUB_TOKEN }}
+#           release-type: node
+#           package-name: '@SandrJS/test-graphiQL'
+#           default-branch: develop
 
-permissions:
-  contents: write
-  pull-requests: write
-
-jobs:
-  release:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Use release-please action
-        uses: google-github-actions/release-please-action@v3
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          release-type: node
-          package-name: '@SandrJS/test-graphiQL'
-          default-branch: develop
-          default_branch_protected: true
