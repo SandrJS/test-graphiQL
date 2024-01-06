@@ -1,0 +1,70 @@
+@import '../../../../scss/abstracts/variables';
+.basic {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+}
+.basic_wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  flex: 1 1 0%;
+}
+.basic_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 5rem;
+  width: 100%;
+}
+.header_list {
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  padding: $padding--element--medium;
+}
+.header_item_active {
+  display: flex;
+  align-items: stretch;
+  padding: $padding--link;
+  border-radius: $br--8;
+
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--text--hover);
+    }
+  }
+  button {
+    transition: 0.3s ease-in-out;
+    border: none;
+    cursor: pointer;
+    font-size: $fs--14;
+    background-color: inherit;
+  }
+}
+.header_item {
+  display: flex;
+  align-items: stretch;
+  border-radius: $br--8;
+  // color: var(--text-main);
+  padding: $padding--link;
+  margin-left: 2rem;
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--text--hover);
+    }
+  }
+  button {
+    transition: 0.3s ease-in-out;
+    border: none;
+    cursor: pointer;
+    font-size: $fs--14;
+    background-color: inherit;
+  }
+}
+.header_right {
+  margin-right: 2rem;
+  color: var(--background-end-color);
+}
