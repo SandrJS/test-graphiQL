@@ -1,0 +1,34 @@
+// Field - outline
+
+@mixin field-outline($color) {
+  box-shadow: inset 0 0 0 1px $color;
+}
+
+// Field - text params
+
+@mixin field-text-params($size, $line-height) {
+  font-size: $size;
+  line-height: $line-height;
+}
+
+// Animation keyframes
+
+@mixin keyframes($name) {
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+// Animation prefixes mixin
+
+@mixin useAnimation($str) {
+  animation: #{$str};
+}
+
+// Hover and active
+
+@mixin hover-active {
+  &:hover, &:active {
+    @content;
+  }
+}
