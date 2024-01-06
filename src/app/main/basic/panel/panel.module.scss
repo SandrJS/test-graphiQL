@@ -1,0 +1,103 @@
+@import '../../../../scss/abstracts/variables';
+.panel {
+  display: flex;
+  flex: 1;
+  padding: 1rem;
+}
+.editors {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--element--background);
+  border-radius: $br--6;
+  width: 50%;
+}
+.editor_wrapp {
+  display: flex;
+  width: 100%;
+  padding: 1rem;
+}
+.editor_inner {
+   position: relative;
+ }
+.textarea {
+  position: absolute;
+  padding: 0px;
+  min-height: 1em;
+  outline: none;
+  border: none;
+}
+.vscrollbar {
+  bottom: 17px;
+  display: block;
+  div {
+    min-width: 1px;
+    height: 728px;
+  }
+}
+.hscrollbar {
+  right: 17px;
+  left: 33px;
+  display: block;
+  div {
+    height: 100%;
+    min-height: 1px;
+    width: 664px;
+  }
+}
+
+.toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 5rem;
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    width: 3rem;
+    border-radius: $br--6;
+    transition: 0.3s ease-in-out;
+    border: none;
+    cursor: pointer;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: var(--text--hover);
+      }
+    }
+
+    &:disabled {
+      background-color: var(--button-disabled);
+    }
+  }
+}
+.tools {
+  cursor: row-resize;
+  display: flex;
+  width: 100%;
+  column-gap: 2rem;
+  padding: 1rem;
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: $br--6;
+    transition: 0.3s ease-in-out;
+    border: none;
+    cursor: pointer;
+    background-color: inherit;
+    font-size: $fs--14;
+    padding: $padding--link;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: var(--tertiary--tiny);
+      }
+    }
+  }
+}
+.editor_tools {
+  margin-left: auto;
+}
